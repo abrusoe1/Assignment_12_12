@@ -3,11 +3,11 @@ import java.util.*;
 public abstract class Movie
 {
 
-	protected String title;
-	protected int runTime;
+	private String title;
+	private int runTime;
 	
 
-	List<String> scenes = new ArrayList<>();
+	private List<String> scenes = new ArrayList<>();
 	final int FINAL_SCENE = 3;
 	
 	public void printInfo()
@@ -36,5 +36,27 @@ public abstract class Movie
 		this.runTime = runtime;
 	}
 
-	
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public int getRunTime() {
+		return runTime;
+	}
+
+	public void setRunTime(int runTime) {
+		this.runTime = runTime;
+	}
+
+	public List<String> getScenes() {
+		return scenes;
+	}
+
+	public void setScenes(List<String> scenes) {
+		this.scenes = scenes;
+	}
 }

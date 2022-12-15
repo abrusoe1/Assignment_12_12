@@ -12,7 +12,7 @@ public class DVD extends Movie
 		while(choosingScene)
 		{
 			System.out.println();
-			System.out.print("Which scene of the DVD " + title + " would you like to watch? Select 0 to 3: ");
+			System.out.print("Which scene of the DVD " + getTitle() + " would you like to watch? Select 0 to 3: ");
 			int sceneSelect = scnr1.nextInt();
 			if (sceneSelect > FINAL_SCENE || sceneSelect < 0)
 			{
@@ -20,16 +20,16 @@ public class DVD extends Movie
 			}
 			else
 			{
-				System.out.println(scenes.get(sceneSelect));
+				System.out.println(getScenes().get(sceneSelect));
 				choosingScene = false;
 			}
 		}
 	}
 	
-	public DVD (String title, int runtime)
+	public DVD (String title, int runTime)
 	{
-		this.title = title;
-		this.runTime = runtime;
+		setTitle(title);
+		setRunTime(runTime);
 	}
 	
 }
